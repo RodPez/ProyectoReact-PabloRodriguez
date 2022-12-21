@@ -1,0 +1,40 @@
+
+.marca{
+    font-weight: bolder;
+    position: relative;
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: gainsboro;
+    position:calc(marca);
+}
+
+.navi{
+    float: left;
+}
+
+.navi a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navi a:hover {
+    background-color: darkgray;
+}
+
+.widget-container{
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+}
