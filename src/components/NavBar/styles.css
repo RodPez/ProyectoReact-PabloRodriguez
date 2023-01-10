@@ -17,7 +17,7 @@
     float: left;
 }
 
-.navi a{
+.navi .linksCategorias{
     display: block;
     color: black;
     text-align: center;
@@ -25,7 +25,7 @@
     text-decoration: none;
 }
 
-.navi a:hover {
+.navi .linksCategorias:hover {
     background-color: darkgray;
 }
 

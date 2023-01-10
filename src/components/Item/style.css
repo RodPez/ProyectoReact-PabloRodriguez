@@ -1,0 +1,14 @@
+div .tarjeta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:35rem;
+    height: 35rem;
+}
+
+.imgCards {
+    height: 60%;
+    width: auto;
+}
