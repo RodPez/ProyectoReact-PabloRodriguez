@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../../components/ItemCount'
+import { Shop } from '../../context/ShopProvider'
 import "./styles.css"
 
 const ItemDetail = ({detail} ) => {
     const [cantProd , setCantProd] = useState(0)
+
+    const {addProduct} = useContext(Shop)
+
     const stock = detail.stock
     const onAdd = (cantidad) => {
-      console.log(`Se agregaron ${cantidad} de productos.`)
-      setCantProd(cantidad)
+      if (cantidad < stock){
+        console.log(`Se agregaron ${cantidad} de productos.`)
+        setCantProd(cantidad)
+        addProduct({...detail, cantProd: cantidad})
+      }
     }
   return (
     <div>
@@ -19,7 +27,7 @@ const ItemDetail = ({detail} ) => {
       {
         cantProd === 0 
         ?<ItemCount stockProd={stock} initial={1} onAdd ={onAdd}  />
-        :<div class="d-grid gap-2 col-6 mx-auto"> 
+        :<div className="d-grid gap-2 col-6 mx-auto"> 
             <button className='btn btn-light ms-4 fs-5'>
               <Link className='text-decoration-none fw-bold text-dark' to="/cart">Finalizar Compra.</Link>
             </button>

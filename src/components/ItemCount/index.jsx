@@ -9,6 +9,8 @@ const ItemCount = ({onAdd,initial,stockProd}) => {
     const sumarContador = () => {
         if (count < stockProd) {
             setCount (count + 1) 
+        }else{
+            setCount(0)
         }
     }
 

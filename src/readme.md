@@ -1,0 +1,3 @@
+# Proyecto e-commerce en React JS
+
+Este proyecto se basa en una tienda de venta de comidas, bebidas y postres. El mismo cuenta con el uso de librerias como Firebase para consumir colecciones de datos y guardar los datos generados en las ordenes de compra, Bootstrap para la estilizacion de los componentes, React-Bootstrap para la creacion de un modal y React-Hooks-Form para la manipulacion y validacion de datos obtenidos a traves del form, tambien se utilizo SweetAlert2 para la devolucion visual de la orden de compra con su correspondiente ID .
